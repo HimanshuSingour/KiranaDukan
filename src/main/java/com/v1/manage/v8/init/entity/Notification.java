@@ -27,5 +27,4 @@ public class Notification {
     @Temporal(TemporalType.TIMESTAMP)
     private Date notificationDate;
 
-    // Getters and Setters
 }

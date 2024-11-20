@@ -43,11 +43,4 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Order> orders = new HashSet<>(); // Link to orders for CUSTOMERS
 
-    public User(String username, String password, String email, Set<UserRole> roles) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.roles = roles;
-    }
-
 }

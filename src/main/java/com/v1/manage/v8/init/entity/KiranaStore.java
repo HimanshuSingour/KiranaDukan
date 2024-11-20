@@ -26,7 +26,7 @@ public class KiranaStore {
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private User user; // Linked User (OWNER)
+    private User user;
 
     @OneToMany(mappedBy = "kiranaStore", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Product> products = new HashSet<>();
@@ -34,5 +34,4 @@ public class KiranaStore {
     @OneToMany(mappedBy = "kiranaStore", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Order> orders = new HashSet<>();
 
-    // Getters and Setters
 }

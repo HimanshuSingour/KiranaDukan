@@ -24,5 +24,4 @@ public class Cart {
     @OneToMany(mappedBy = "cart")
     private List<CartItem> items;
 
-    // Getters and Setters
 }

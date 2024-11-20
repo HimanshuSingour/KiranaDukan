@@ -25,11 +25,11 @@ public class Review {
     @JoinColumn(name = "kirana_store_id")
     private KiranaStore kiranaStore;
 
-    private Integer rating; // 1 to 5
+    private Integer rating;
+
     private String comment;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date reviewDate;
 
-    // Getters and Setters
 }

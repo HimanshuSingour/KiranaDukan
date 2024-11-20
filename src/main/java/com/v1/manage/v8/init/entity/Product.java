@@ -29,5 +29,4 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private List<OrderItem> orderItems;
 
-    // Getters and Setters
 }

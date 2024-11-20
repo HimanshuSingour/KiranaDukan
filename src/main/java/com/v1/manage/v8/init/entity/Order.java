@@ -21,18 +21,17 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
 
-    private String status; // PENDING, CONFIRMED, DELIVERED
+    private String status;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private User user; // Customer who placed the order
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "kirana_store_id", nullable = false)
-    private KiranaStore kiranaStore; // Store fulfilling the order
+    private KiranaStore kiranaStore;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<OrderItem> orderItems = new HashSet<>();
 
-    // Getters and Setters
 }
